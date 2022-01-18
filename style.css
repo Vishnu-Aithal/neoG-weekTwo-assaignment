@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+hr {
+  margin: 1rem auto;
+}
+
+.container-sm {
+  min-width: 480px;
+  min-height: 360px;
+  padding: 1rem;
+  box-shadow: 1px 1px 1px lightgray;
+  background-color: #f7f7f7;
+  margin: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  /* height: 150px; */
+  width: 350px;
+  box-shadow: 1px 1px 2px gray;
+  border-radius: 5px;
+  overflow: hidden;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.card-header {
+  display: flex;
+  flex-basis: 70%;
+}
+
+.card-header-img {
+  object-fit: cover;
+  flex-basis: 30%;
+  width: 120px;
+  height: 100px;
+  border-radius: 0 3px 3px 0;
+}
+.card-header-text {
+  flex-grow: 1;
+  padding: 0.7rem 1rem;
+  line-height: 1.7;
+}
+
+.sub-heading {
+  font-size: small;
+  color: gray;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.3rem;
+}
+
+.card-btn {
+  padding: 0.5rem;
+  background-color: white;
+  border: none;
+}
+
+.card-btn:hover {
+  background-color: whitesmoke;
+}
+
+.card-btn-text {
+  border-radius: 3px;
+  font-weight: bold;
+  color: blue;
+}
+.card-btn-icon {
+  border-radius: 100%;
+}
