@@ -15,13 +15,15 @@ hr {
 }
 
 .container-sm {
-  min-width: 480px;
+  width: 480px;
   min-height: 360px;
   padding: 1rem;
   box-shadow: 1px 1px 1px lightgray;
   background-color: #f7f7f7;
   margin: 1rem;
 }
+
+/* ----------------------------CARD------------------ */
 
 .card {
   display: flex;
@@ -81,4 +83,57 @@ hr {
 }
 .card-btn-icon {
   border-radius: 100%;
+}
+
+/* ---------------------CHIPS-------------------- */
+
+.chips {
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px gray;
+  background-color: white;
+  padding: 0.5rem;
+}
+
+.chips:hover {
+  border-bottom: solid 2px black;
+}
+
+.chips-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  padding-top: 0.5rem;
+}
+
+.chip {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.2rem;
+  margin: 0.5rem 1rem 0 0;
+  background-color: #e5e5e5;
+  padding: 0.5rem;
+  border-radius: 20px;
+}
+
+.chip:hover {
+  background-color: #d4d4d4;
+}
+
+.chip-text {
+  margin-right: 0.5rem;
+  cursor: default;
+}
+
+.chip-dismiss:hover {
+  color: #737373;
+}
+
+.input-new-chip {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  order: 1;
+}
+.input-new-chip:focus {
+  outline: none;
 }
