@@ -23,6 +23,12 @@ hr {
   margin: 1rem;
 }
 
+.sub-heading {
+  font-size: small;
+  color: gray;
+  font-weight: 500;
+}
+
 /* ----------------------------CARD------------------ */
 
 .card {
@@ -53,11 +59,6 @@ hr {
   flex-grow: 1;
   padding: 0.7rem 1rem;
   line-height: 1.7;
-}
-
-.sub-heading {
-  font-size: small;
-  color: gray;
 }
 
 .card-footer {
@@ -111,7 +112,7 @@ hr {
   gap: 0.2rem;
   margin: 0.5rem 1rem 0 0;
   background-color: #e5e5e5;
-  padding: 0.5rem;
+  padding: 0.3rem 0.5rem;
   border-radius: 20px;
 }
 
@@ -122,6 +123,8 @@ hr {
 .chip-text {
   margin-right: 0.5rem;
   cursor: default;
+  font-size: small;
+  font-weight: 500;
 }
 
 .chip-dismiss:hover {
