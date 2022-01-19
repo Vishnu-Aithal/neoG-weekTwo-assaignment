@@ -130,6 +130,7 @@ hr {
   background-color: #e5e5e5;
   padding: 0.3rem 0.5rem;
   border-radius: 20px;
+  overflow-wrap: anywhere;
 }
 
 .chip:hover {
@@ -141,7 +142,6 @@ hr {
   cursor: default;
   font-size: small;
   font-weight: 500;
-  overflow-wrap: break-word;
 }
 
 .chip-dismiss:hover {
