@@ -34,27 +34,42 @@ hr {
 .card {
   display: flex;
   flex-direction: column;
-  /* height: 150px; */
   width: 350px;
   box-shadow: 1px 1px 2px gray;
   border-radius: 5px;
   overflow: hidden;
   justify-content: space-between;
   background-color: white;
+  margin: 1rem;
 }
 
-.card-header {
+.card-hz .card-header {
   display: flex;
   flex-basis: 70%;
 }
 
-.card-header-img {
+.card-hz .card-header-img {
   object-fit: cover;
   flex-basis: 30%;
   width: 120px;
   height: 100px;
   border-radius: 0 3px 3px 0;
 }
+
+.card-b .card-header {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50;
+}
+
+.card-b .card-header-img {
+  object-fit: fill;
+}
+.card-b .card-body {
+  display: block;
+  padding: 0 1rem 0 1rem;
+}
+
 .card-header-text {
   flex-grow: 1;
   padding: 0.7rem 1rem;
@@ -64,7 +79,7 @@ hr {
 .card-footer {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 0.3rem;
+  padding: 0.5rem;
 }
 
 .card-btn {
