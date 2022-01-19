@@ -19,7 +19,7 @@ hr {
   min-height: 360px;
   padding: 1rem;
   box-shadow: 1px 1px 1px lightgray;
-  background-color: #f7f7f7;
+  background-color: #f3f4f6;
   margin: 1rem;
 }
 
@@ -84,6 +84,7 @@ hr {
 }
 .card-btn-icon {
   border-radius: 100%;
+  width: 2rem;
 }
 
 /* ---------------------CHIPS-------------------- */
