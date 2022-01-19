@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 body {
   font-family: "Montserrat", sans-serif;
@@ -21,6 +21,7 @@ hr {
   box-shadow: 1px 1px 1px lightgray;
   background-color: #f3f4f6;
   margin: 1rem;
+  border-radius: 5px;
 }
 
 .sub-heading {
@@ -125,7 +126,6 @@ hr {
 .chip {
   display: flex;
   justify-content: space-between;
-  gap: 0.2rem;
   margin: 0.5rem 1rem 0 0;
   background-color: #e5e5e5;
   padding: 0.3rem 0.5rem;
