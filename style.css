@@ -141,6 +141,7 @@ hr {
   cursor: default;
   font-size: small;
   font-weight: 500;
+  overflow-wrap: break-word;
 }
 
 .chip-dismiss:hover {
