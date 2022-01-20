@@ -296,3 +296,63 @@ hr {
 .header .header-brand {
   font-size: larger;
 }
+
+/* ----------------Badge------------------- */
+
+.icon-with-badge {
+  position: relative;
+  width: max-content;
+  margin: 1rem;
+}
+.text-with-badge {
+  position: relative;
+  width: max-content;
+  margin: 1rem;
+}
+
+.button-with-badge {
+  position: relative;
+  width: max-content;
+  margin: 1rem;
+}
+
+.button-with-badge-toggle {
+  position: relative;
+  width: max-content;
+  margin: 1rem;
+}
+
+.btn-badge,
+.btn-badge-toggle {
+  padding: 0.3rem;
+  font-weight: 600;
+  background: linear-gradient(#60a5fa, #3b82f6);
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.btn-badge-toggle {
+  background: linear-gradient(#cbd5e1, #94a3b8);
+}
+
+.btn-badge-hide {
+  display: none;
+}
+.btn-badge:hover {
+  background: #bfdbfe;
+}
+.btn-badge-toggle:hover {
+  background: #e2e8f0;
+}
+
+.badge {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  border-radius: 100%;
+  padding: 0.2rem;
+  background-color: lightgray;
+  font-size: x-small;
+  font-weight: 600;
+}

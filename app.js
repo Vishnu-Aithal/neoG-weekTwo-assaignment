@@ -59,3 +59,10 @@ document.querySelectorAll(".drawer-head-sub").forEach(
         : (currentArrowIcon.innerHTML = `<i class="fas fa-angle-up fa-lg"></i>`);
     })
 );
+
+//Badge Toggle Functionality
+
+let badgeToggleBtn = document.querySelector(".btn-badge-toggle");
+badgeToggleBtn.onclick = (e) => {
+  e.target.parentElement.children[1].classList.toggle("btn-badge-hide");
+};
