@@ -14,10 +14,12 @@
       defer
       src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"
     ></script>
+
     <title>Component-Library</title>
   </head>
   <body>
     <main class="main">
+      <!-- Cards -->
       <div class="container-sm">
         <h2>Card</h2>
         <hr />
@@ -94,7 +96,7 @@
           </div>
         </div>
       </div>
-
+      <!-- Chips -->
       <div class="container-sm">
         <h2>Chips</h2>
         <hr />
@@ -109,6 +111,63 @@
               placeholder="New chip..."
             />
           </div>
+        </div>
+      </div>
+
+      <div class="container-sm">
+        <h2>Drawer</h2>
+        <br />
+
+        <div class="drawer">
+          <div class="drawer-head">
+            <h3 class="drawer-head-text">Title</h3>
+            <p class="sub-heading">subtext</p>
+            <button class="main-drawer-collapse">
+              <i class="fas fa-angle-up fa-2x"></i>
+            </button>
+          </div>
+
+          <ul class="drawer-list drawer-list-main">
+            <li class="drawer-list-item">
+              <i class="far fa-heart left-icon"></i>
+              <p class="text">Inbox</p>
+              <div class="notif-count">25</div>
+            </li>
+
+            <li class="drawer-list-sub">
+              <div class="drawer-head-sub">
+                <i class="far fa-heart left-icon"></i>
+                <p class="text">Nested list</p>
+                <button class="sub-drawer-collapse">
+                  <i class="fas fa-angle-right"></i>
+                </button>
+              </div>
+
+              <ul class="drawer-list collapsed">
+                <li class="drawer-list-item">
+                  <i class="far fa-heart left-icon"></i>
+                  <p class="text">Inbox</p>
+                  <div class="notif-count">25</div>
+                </li>
+                <li class="drawer-list-item">
+                  <i class="far fa-heart left-icon"></i>
+                  <p class="text">Inbox</p>
+                  <div class="notif-count">25</div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="drawer-list-item">
+              <i class="far fa-heart left-icon"></i>
+              <p class="text">Star</p>
+              <div class="notif-count">56</div>
+            </li>
+            <li class="drawer-list-item">
+              <i class="far fa-heart left-icon"></i>
+              <p class="text">Drafts</p>
+              <div class="notif-count">89</div>
+            </li>
+          </ul>
         </div>
       </div>
     </main>

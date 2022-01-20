@@ -3,13 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+li {
+  list-style-type: none;
+}
+
 .main {
   display: flex;
   flex-wrap: wrap;
 }
+
 hr {
   margin: 1rem auto;
 }
@@ -66,6 +73,7 @@ hr {
 .card-b .card-header-img {
   object-fit: fill;
 }
+
 .card-b .card-body {
   display: block;
   padding: 0 1rem 0 1rem;
@@ -98,6 +106,7 @@ hr {
   font-weight: bold;
   color: blue;
 }
+
 .card-btn-icon {
   border-radius: 100%;
   width: 2rem;
@@ -152,8 +161,111 @@ hr {
   padding: 0.5rem;
   border-radius: 5px;
   border: none;
+  flex-grow: 1;
   order: 1;
 }
+
 .input-new-chip:focus {
   outline: none;
+}
+
+/* ----------------Drawer------------------- */
+
+.drawer {
+  width: 300px;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 1px 1px 2px gray;
+  max-height: 250px;
+  overflow-y: auto;
+  transition: 200ms ease;
+  height: auto;
+}
+
+.drawer .collapsed {
+  display: none;
+}
+
+.drawer-head {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.main-drawer-collapse {
+  position: absolute;
+  margin: 0.5rem;
+  top: 0;
+  right: 0;
+  -webkit-appearance: none;
+  background-color: white;
+  border: none;
+}
+
+.drawer-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-drawer-collapse {
+  margin-left: auto;
+  -webkit-appearance: none;
+  background-color: inherit;
+  border: none;
+}
+
+.drawer-list-item {
+  display: flex;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  align-items: center;
+}
+
+.drawer-list-sub {
+  flex-direction: column;
+  align-items: start;
+}
+
+.drawer-head-sub {
+  display: flex;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  align-items: center;
+}
+
+.drawer-head-sub > * {
+  pointer-events: none;
+}
+
+.drawer-list-sub .drawer-list {
+  margin-left: 1rem;
+}
+
+.drawer-list-item .text {
+  cursor: default;
+}
+
+.drawer-list-item:hover,
+.drawer-head-sub:hover {
+  background-color: #e5e7eb;
+}
+
+.drawer-list-item:active {
+  background-color: #2563eb;
+}
+
+.drawer-list-item.selected {
+  background-color: #93c5fd;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.drawer-list .left-icon {
+  margin-right: 2rem;
+}
+
+.drawer-list-item .notif-count {
+  margin-left: auto;
+  order: 1;
+  font-size: small;
+  font-weight: 500;
 }
