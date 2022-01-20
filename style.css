@@ -22,7 +22,7 @@ hr {
 }
 
 .container-sm {
-  width: 480px;
+  min-width: 480px;
   min-height: 360px;
   padding: 1rem;
   box-shadow: 1px 1px 1px lightgray;
@@ -197,6 +197,7 @@ hr {
   -webkit-appearance: none;
   background-color: white;
   border: none;
+  cursor: pointer;
 }
 
 .drawer-list {
@@ -266,4 +267,32 @@ hr {
   order: 1;
   font-size: small;
   font-weight: 500;
+}
+
+/* ----------------Header------------------- */
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #7c3aed;
+  color: white;
+}
+
+.header .header-brand {
+  margin-right: auto;
+  cursor: default;
+}
+
+.header button {
+  background-color: inherit;
+  -webkit-appearance: none;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.header .header-brand {
+  font-size: larger;
 }

@@ -55,7 +55,7 @@ document.querySelectorAll(".drawer-head-sub").forEach(
       let currentArrowIcon = e.target.children[2];
       currentSubDrawerList.classList.toggle("collapsed");
       currentSubDrawerList.classList.contains("collapsed")
-        ? (currentArrowIcon.innerHTML = `<i class="fas fa-angle-right"></i>`)
-        : (currentArrowIcon.innerHTML = `<i class="fas fa-angle-up"></i>`);
+        ? (currentArrowIcon.innerHTML = `<i class="fas fa-angle-right fa-lg"></i>`)
+        : (currentArrowIcon.innerHTML = `<i class="fas fa-angle-up fa-lg"></i>`);
     })
 );
