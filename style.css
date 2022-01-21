@@ -22,7 +22,7 @@ hr {
 }
 
 .container-sm {
-  min-width: 480px;
+  min-width: 350px;
   min-height: 360px;
   padding: 1rem;
   box-shadow: 1px 1px 1px lightgray;
@@ -115,6 +115,7 @@ hr {
 /* ---------------------CHIPS-------------------- */
 
 .chips {
+  width: 350px;
   border-radius: 5px;
   box-shadow: 1px 1px 2px gray;
   background-color: white;
@@ -259,7 +260,8 @@ hr {
   font-weight: 600;
 }
 
-.drawer-list .left-icon {
+.drawer-list .left-icon,
+.drawer-list i {
   margin-right: 2rem;
 }
 
@@ -273,6 +275,7 @@ hr {
 /* ----------------Header------------------- */
 
 .header {
+  min-width: 500px;
   display: flex;
   align-items: center;
   background-color: #7c3aed;
