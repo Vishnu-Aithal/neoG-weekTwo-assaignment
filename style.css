@@ -68,14 +68,17 @@ hr {
   border-radius: 0 3px 3px 0;
 }
 
-.card-b .card-header {
+.card-b .card-header,
+.card-t .card-header {
   display: flex;
   flex-direction: column;
-  flex-basis: 50;
+  flex-basis: 50%;
 }
 
-.card-b .card-header-img {
+.card-b .card-header-img,
+.card-t .card-header-img {
   object-fit: fill;
+  width: 100%;
 }
 
 .card-b .card-body {
@@ -83,10 +86,42 @@ hr {
   padding: 0 1rem 0 1rem;
 }
 
+.card-t .card-header {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.card-t .card-header-img {
+  grid-column: 1 / 1;
+  grid-row: 1 / 3;
+}
+
+.card-t .card-header-text {
+  grid-column: 1 / 1;
+  grid-row: 2 / 3;
+  color: white;
+}
+
+.card-t .sub-heading {
+  color: rgb(211, 209, 209)
+}
+
+.card-t .card-body {
+  display: block;
+  padding: 1rem 1rem 0;
+}
+
+
 .card-header-text {
   flex-grow: 1;
   padding: 0.7rem 1rem;
   line-height: 1.7;
+}
+
+.card-body {
+  font-size: small;
+  color: gray;
+  font-weight: 500;
 }
 
 .card-footer {
