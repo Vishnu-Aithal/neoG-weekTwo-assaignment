@@ -39,7 +39,7 @@ drawerListItems.forEach(
   })
 );
 
-let mainDrawerCollapse = document.querySelector(".main-drawer-collapse");
+const mainDrawerCollapse = document.querySelector(".main-drawer-collapse");
 mainDrawerCollapse.onclick = () => {
   let mainList = document.querySelector(".drawer-list-main");
   mainList.classList.toggle("collapsed");
@@ -62,17 +62,30 @@ document.querySelectorAll(".drawer-head-sub").forEach(
 
 //Badge Toggle Functionality
 
-let badgeToggleBtn = document.querySelector(".btn-badge-toggle");
+const badgeToggleBtn = document.querySelector(".btn-badge-toggle");
 badgeToggleBtn.onclick = (e) => {
   e.target.parentElement.children[1].classList.toggle("btn-badge-hide");
 };
 
 //SnackBar Functionality
 
-let showSnackbar = document.querySelector(".show-snackbar");
-let snackbar = document.querySelector(".snackbar")
-let snackbarDismiss = document.querySelector(".snackbar-dismiss");
-let snackbarAction = document.querySelector(".snackbar-action")
+const showSnackbar = document.querySelector(".show-snackbar");
+const snackbar = document.querySelector(".snackbar")
+const snackbarDismiss = document.querySelector(".snackbar-dismiss");
+const snackbarAction = document.querySelector(".snackbar-action")
 showSnackbar.onclick = () => snackbar.style.display = "flex";
 snackbarDismiss.onclick = () => snackbar.style.display = "none";
 snackbarAction.onclick = () => location.reload();
+
+//Tabs Functionality 
+
+let activeTab;
+const tabs = document.querySelectorAll(".tab");
+tabs.forEach(tab => {
+  tab.onclick = (e) => {
+    let currentTab = e.target
+    if (activeTab) activeTab.classList.remove("active")
+    currentTab.classList.add("active");
+    activeTab = currentTab;
+  }
+})
