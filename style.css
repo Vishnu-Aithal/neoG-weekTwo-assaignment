@@ -511,6 +511,7 @@ hr {
 .tab {
   min-width: max-content;
   padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
 .tab:hover {
