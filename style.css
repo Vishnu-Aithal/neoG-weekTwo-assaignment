@@ -13,8 +13,8 @@ li {
 }
 
 .main {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
 }
 
 hr {
@@ -22,15 +22,16 @@ hr {
 }
 
 .container-sm {
-  width: min-content;
-  min-width: max-content;
-  max-width: 95vw;
   min-height: 360px;
   padding: 1rem;
   box-shadow: 1px 1px 1px lightgray;
   background-color: #f3f4f6;
   margin: 1rem;
   border-radius: 5px;
+}
+
+.no-container-title {
+  margin: 1rem;
 }
 
 .sub-heading {
@@ -45,12 +46,13 @@ hr {
   display: flex;
   flex-direction: column;
   width: 350px;
+  max-width: 100%;
   box-shadow: 1px 1px 2px gray;
   border-radius: 5px;
   overflow: hidden;
   justify-content: space-between;
   background-color: white;
-  margin: 1rem;
+  margin: 1rem 0;
 }
 
 .card-hz .card-header {
@@ -118,6 +120,7 @@ hr {
 
 .chips {
   width: 350px;
+  max-width: 100%;
   border-radius: 5px;
   box-shadow: 1px 1px 2px gray;
   background-color: white;
@@ -161,6 +164,7 @@ hr {
 }
 
 .input-new-chip {
+  width: 50px;
   padding: 0.5rem;
   border-radius: 5px;
   border: none;
@@ -176,6 +180,7 @@ hr {
 
 .drawer {
   width: 300px;
+  max-width: 100%;
   background-color: white;
   padding: 1rem;
   box-shadow: 1px 1px 2px gray;
@@ -287,12 +292,13 @@ hr {
 /* ----------------Header------------------- */
 
 .header {
-  min-width: 500px;
   width: 100%;
+  padding: 1rem;
   display: flex;
   align-items: center;
   background-color: #7c3aed;
   color: white;
+  flex-wrap: nowrap;
 }
 
 .header .header-brand {
@@ -300,19 +306,33 @@ hr {
   cursor: default;
 }
 
+.header-button {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
 .header button {
   background-color: inherit;
   -webkit-appearance: none;
-  padding: 0.5rem;
-  margin: 0.5rem;
   border: none;
   cursor: pointer;
   color: white;
+  font-size: 1.2rem;
+}
+
+
+.header .nav-toggle {
+  font-size: 1.5rem;
+  margin-right: 1rem;
 }
 
 .header .header-brand {
-  font-size: larger;
+  font-size: 1.1rem;
+  flex-shrink: 1;
 }
+
+
 
 /* ----------------Badge------------------- */
 
@@ -512,12 +532,13 @@ hr {
 }
 
 .tabs-s::-webkit-scrollbar {
-  height: 2px;
+  height: 5px;
   /* display: none; */
 }
 
 .tabs-s::-webkit-scrollbar-thumb {
   background-color: gray;
+  border-radius: 2px;
 }
 
 .tab {
