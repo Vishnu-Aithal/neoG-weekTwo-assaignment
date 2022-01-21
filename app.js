@@ -32,32 +32,32 @@ const drawerListItems = document.querySelectorAll(".drawer-list-item");
 let activeItem;
 drawerListItems.forEach(
   (item) =>
-    (item.onclick = () => {
-      if (activeItem) activeItem.classList.remove("selected");
-      item.classList.add("selected");
-      activeItem = item;
-    })
+  (item.onclick = () => {
+    if (activeItem) activeItem.classList.remove("selected");
+    item.classList.add("selected");
+    activeItem = item;
+  })
 );
 
 let mainDrawerCollapse = document.querySelector(".main-drawer-collapse");
 mainDrawerCollapse.onclick = () => {
   let mainList = document.querySelector(".drawer-list-main");
   mainList.classList.toggle("collapsed");
-  mainList.classList.contains("collapsed")
-    ? (mainDrawerCollapse.innerHTML = `<i class="fas fa-angle-down fa-2x"></i>`)
-    : (mainDrawerCollapse.innerHTML = `<i class="fas fa-angle-up fa-2x"></i>`);
+  mainList.classList.contains("collapsed") ?
+    (mainDrawerCollapse.innerHTML = `<i class="fas fa-angle-down fa-2x"></i>`) :
+    (mainDrawerCollapse.innerHTML = `<i class="fas fa-angle-up fa-2x"></i>`);
 };
 
 document.querySelectorAll(".drawer-head-sub").forEach(
   (subList) =>
-    (subList.onclick = (e) => {
-      let currentSubDrawerList = e.target.parentElement.children[1];
-      let currentArrowIcon = e.target.children[2];
-      currentSubDrawerList.classList.toggle("collapsed");
-      currentSubDrawerList.classList.contains("collapsed")
-        ? (currentArrowIcon.innerHTML = `<i class="fas fa-angle-right fa-lg"></i>`)
-        : (currentArrowIcon.innerHTML = `<i class="fas fa-angle-up fa-lg"></i>`);
-    })
+  (subList.onclick = (e) => {
+    let currentSubDrawerList = e.target.parentElement.children[1];
+    let currentArrowIcon = e.target.children[2];
+    currentSubDrawerList.classList.toggle("collapsed");
+    currentSubDrawerList.classList.contains("collapsed") ?
+      (currentArrowIcon.innerHTML = `<i class="fas fa-angle-right fa-lg"></i>`) :
+      (currentArrowIcon.innerHTML = `<i class="fas fa-angle-up fa-lg"></i>`);
+  })
 );
 
 //Badge Toggle Functionality
@@ -66,3 +66,13 @@ let badgeToggleBtn = document.querySelector(".btn-badge-toggle");
 badgeToggleBtn.onclick = (e) => {
   e.target.parentElement.children[1].classList.toggle("btn-badge-hide");
 };
+
+//SnackBar Functionality
+
+let showSnackbar = document.querySelector(".show-snackbar");
+let snackbar = document.querySelector(".snackbar")
+let snackbarDismiss = document.querySelector(".snackbar-dismiss");
+let snackbarAction = document.querySelector(".snackbar-action")
+showSnackbar.onclick = () => snackbar.style.display = "flex";
+snackbarDismiss.onclick = () => snackbar.style.display = "none";
+snackbarAction.onclick = () => location.reload();

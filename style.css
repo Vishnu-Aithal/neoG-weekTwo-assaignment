@@ -186,6 +186,7 @@ hr {
 
 .drawer-head {
   margin-bottom: 1rem;
+  padding-left: 0.5rem;
   position: relative;
 }
 
@@ -231,7 +232,7 @@ hr {
   align-items: center;
 }
 
-.drawer-head-sub > * {
+.drawer-head-sub>* {
   pointer-events: none;
 }
 
@@ -299,11 +300,17 @@ hr {
 
 /* ----------------Badge------------------- */
 
+.about-badge {
+  font-weight: 600;
+  margin: 1rem;
+}
+
 .icon-with-badge {
   position: relative;
   width: max-content;
   margin: 1rem;
 }
+
 .text-with-badge {
   position: relative;
   width: max-content;
@@ -339,9 +346,11 @@ hr {
 .btn-badge-hide {
   display: none;
 }
+
 .btn-badge:hover {
   background: #bfdbfe;
 }
+
 .btn-badge-toggle:hover {
   background: #e2e8f0;
 }
@@ -355,4 +364,57 @@ hr {
   background-color: lightgray;
   font-size: x-small;
   font-weight: 600;
+}
+
+/* ----------------SnackBar------------------- */
+
+.show-snackbar {
+  padding: 0.3rem;
+  font-weight: 600;
+  background: linear-gradient(#333, #444);
+  color: white;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.show-snackbar:hover {
+  background: #666;
+}
+
+.snackbar {
+  display: none;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem;
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.2rem;
+  box-shadow: 1px 1px 2px gray;
+}
+
+.snackbar-message {
+  margin-right: 3rem;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.snackbar-btn {
+  border: none;
+  -webkit-appearance: none;
+  background-color: inherit;
+  margin: 0 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.snackbar-action {
+  color: #6200ee;
+}
+
+.snackbar-dismiss {
+  color: white;
 }
