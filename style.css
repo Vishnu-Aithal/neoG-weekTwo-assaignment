@@ -22,6 +22,7 @@ hr {
 }
 
 .container-sm {
+  max-width: max-content;
   min-width: 350px;
   min-height: 360px;
   padding: 1rem;
@@ -276,6 +277,7 @@ hr {
 
 .header {
   min-width: 500px;
+  width: 100%;
   display: flex;
   align-items: center;
   background-color: #7c3aed;
@@ -389,6 +391,9 @@ hr {
   display: none;
   align-items: center;
   background-color: #333;
+  width: max-content;
+  min-width: 60vw;
+  max-width: 95vw;
   padding: 1rem;
   position: fixed;
   bottom: 10%;
@@ -399,7 +404,7 @@ hr {
 }
 
 .snackbar-message {
-  margin-right: 3rem;
+  margin-right: auto;
   color: white;
   font-size: 0.9rem;
   font-weight: 500;
@@ -420,4 +425,53 @@ hr {
 
 .snackbar-dismiss {
   color: white;
+}
+
+/* ----------------Dialog------------------- */
+
+.dialog {
+  display: flex;
+  margin: 1rem;
+  padding: 1rem;
+  flex-direction: column;
+  background: white;
+  width: max-content;
+  height: max-content;
+  box-shadow: 1px 1px 2px lightgray;
+}
+
+
+
+.dialog-header {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.dialog-text {
+  font-weight: 500;
+  color: slategray;
+  margin-bottom: 3rem;
+}
+
+.dialog-btn-container {
+  margin-left: 1rem;
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+.dialog-btn {
+  -webkit-appearance: none;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  background: inherit;
+  margin: 0 0 0 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  color: #6200ee;
+  cursor: pointer;
+}
+
+.dialog-btn:hover {
+  background: rgb(233, 233, 233);
 }
