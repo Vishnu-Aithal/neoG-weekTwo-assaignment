@@ -234,7 +234,7 @@ hr {
 .drawer-list-item {
   display: flex;
   padding: 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 3px;
   align-items: center;
 }
 
@@ -246,7 +246,7 @@ hr {
 .drawer-head-sub {
   display: flex;
   padding: 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 3px;
   align-items: center;
 }
 
@@ -371,7 +371,7 @@ hr {
   font-weight: 600;
   background: linear-gradient(#60a5fa, #3b82f6);
   border: none;
-  border-radius: 0.2rem;
+  border-radius: 3px;
   cursor: pointer;
 }
 
@@ -410,7 +410,7 @@ hr {
   background: linear-gradient(#333, #444);
   color: white;
   border: none;
-  border-radius: 0.2rem;
+  border-radius: 3px;
   cursor: pointer;
 }
 
@@ -430,7 +430,7 @@ hr {
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 0.2rem;
+  border-radius: 5px;
   box-shadow: 1px 1px 2px gray;
 }
 
@@ -468,7 +468,7 @@ hr {
   background: white;
   width: max-content;
   height: max-content;
-  border-radius: 0.3rem;
+  border-radius: 5px;
   box-shadow: 1px 1px 2px lightgray;
 }
 
@@ -500,7 +500,7 @@ hr {
 .dialog-btn {
   -webkit-appearance: none;
   padding: 0.5rem;
-  border-radius: 0.3rem;
+  border-radius: 2px;
   background: inherit;
   margin: 0 0 0 1rem;
   font-size: 0.9rem;
