@@ -494,10 +494,12 @@ hr {
 .tabs-s {
   display: flex;
   width: 200px;
-  overflow: auto;
+  overflow: hidden;
 }
 
-
+.tabs-s:hover {
+  overflow: auto;
+}
 
 .tabs-s::-webkit-scrollbar {
   height: 2px;
