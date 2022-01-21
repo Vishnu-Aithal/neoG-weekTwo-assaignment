@@ -183,6 +183,16 @@ hr {
   overflow-y: auto;
 }
 
+
+.drawer::-webkit-scrollbar {
+  width: 2px;
+  /* display: none; */
+}
+
+.drawer::-webkit-scrollbar-thumb {
+  background-color: gray;
+}
+
 .drawer .collapsed {
   display: none;
 }
