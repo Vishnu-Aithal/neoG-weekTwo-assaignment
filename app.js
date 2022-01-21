@@ -39,13 +39,22 @@ drawerListItems.forEach(
   })
 );
 
+// const mainDrawerCollapse = document.querySelector(".main-drawer-collapse");
+// mainDrawerCollapse.onclick = () => {
+//   let mainList = document.querySelector(".drawer-list-main");
+//   mainList.classList.toggle("collapsed");
+//   mainList.classList.contains("collapsed") ?
+//     (mainDrawerCollapse.innerHTML = `<i class="fas fa-angle-down fa-2x"></i>`) :
+//     (mainDrawerCollapse.innerHTML = `<i class="fas fa-angle-up fa-2x"></i>`);
+// };
+
 const mainDrawerCollapse = document.querySelector(".main-drawer-collapse");
 mainDrawerCollapse.onclick = () => {
-  let mainList = document.querySelector(".drawer-list-main");
-  mainList.classList.toggle("collapsed");
-  mainList.classList.contains("collapsed") ?
-    (mainDrawerCollapse.innerHTML = `<i class="fas fa-angle-down fa-2x"></i>`) :
-    (mainDrawerCollapse.innerHTML = `<i class="fas fa-angle-up fa-2x"></i>`);
+  let drawer = document.querySelector(".drawer");
+  drawer.classList.toggle("hide-drawer");
+  // mainList.classList.contains("collapsed") ?
+  //   (mainDrawerCollapse.innerHTML = `<i class="fas fa-angle-down fa-2x"></i>`) :
+  //   (mainDrawerCollapse.innerHTML = `<i class="fas fa-angle-up fa-2x"></i>`);
 };
 
 document.querySelectorAll(".drawer-head-sub").forEach(

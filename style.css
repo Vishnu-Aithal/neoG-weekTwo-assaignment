@@ -219,8 +219,31 @@ hr {
   background-color: white;
   padding: 1rem;
   box-shadow: 1px 1px 2px gray;
-  max-height: 250px;
+  height: 250px;
   overflow-y: auto;
+  position: relative;
+}
+
+.drawer.drawer.hide-drawer {}
+
+.drawer.hide-drawer .drawer-head,
+.drawer.hide-drawer .text,
+.drawer.hide-drawer .notif-count,
+.drawer.hide-drawer .sub-drawer-collapse {
+  display: none;
+}
+
+.drawer.hide-drawer {
+  width: fit-content;
+}
+
+.drawer.hide-drawer .main-drawer-collapse {
+  position: static;
+  margin: 0 0.3rem 2rem;
+}
+
+.drawer.hide-drawer .left-icon {
+  margin-right: 0;
 }
 
 
@@ -240,12 +263,11 @@ hr {
 .drawer-head {
   margin-bottom: 1rem;
   padding-left: 0.5rem;
-  position: relative;
 }
 
 .main-drawer-collapse {
   position: absolute;
-  margin: 0.5rem;
+  margin: 1rem;
   top: 0;
   right: 0;
   -webkit-appearance: none;
@@ -253,6 +275,7 @@ hr {
   border: none;
   cursor: pointer;
 }
+
 
 .drawer-list {
   display: flex;
@@ -316,6 +339,8 @@ hr {
 .drawer-list i {
   margin-right: 2rem;
 }
+
+
 
 .drawer-list-item .notif-count {
   margin-left: auto;
