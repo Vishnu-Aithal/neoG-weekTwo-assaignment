@@ -25,6 +25,12 @@ hr {
   border-radius: 5px;
 }
 
+.container-lg {
+  min-height: 360px;
+  background-color: #f3f4f6;
+  box-shadow: 1px 0 1px lightgray;
+}
+
 .no-container-title {
   margin: 1rem;
 }
@@ -215,7 +221,7 @@ hr {
 }
 
 .chip-left-icon {
-  margin-right: 0.5rem;
+  margin-right: 0.3rem;
 }
 
 .chip-text {
