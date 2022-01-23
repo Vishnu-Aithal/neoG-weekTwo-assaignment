@@ -42,6 +42,14 @@ hr {
 
 /* ----------------------------CARD------------------ */
 
+.card-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -106,7 +114,8 @@ hr {
   color: rgb(211, 209, 209)
 }
 
-.card-t .card-body {
+.card-t .card-body,
+.card-h .card-body {
   display: block;
   padding: 1rem 1rem 0;
 }
@@ -128,6 +137,10 @@ hr {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
+}
+
+.cta-icons {
+  margin-left: auto
 }
 
 .card-btn {
@@ -224,7 +237,7 @@ hr {
   position: relative;
 }
 
-.drawer.drawer.hide-drawer {}
+
 
 .drawer.hide-drawer .drawer-head,
 .drawer.hide-drawer .text,
