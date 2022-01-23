@@ -1,7 +1,6 @@
 //Chips Functionality
 
-const addNewChip = function (text) {
-  let chipsWrapper = document.querySelector(".chips-wrapper");
+const addNewChip = function (text, chipsWrapper) {
   let newChip = document.createElement("div");
   newChip.classList.add("chip");
   let newChipText = document.createElement("div");
@@ -16,15 +15,21 @@ const addNewChip = function (text) {
   chipsWrapper.appendChild(newChip);
 };
 
-const newChipInput = document.querySelector(".input-new-chip");
-newChipInput.addEventListener("keyup", (event) => {
-  if (event.key === "Enter") {
-    addNewChip(event.target.value);
-    event.target.value = "";
-  }
-});
+document.querySelectorAll(".input-new-chip").forEach(newChipInput => {
+  newChipInput.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+      let inputText = event.target.value;
+      let targetChipsWrapperId = newChipInput.getAttribute("data-input-target");
+      let targetChipsWrapperElement = document.querySelector(targetChipsWrapperId)
 
-window.onload = () => addNewChip("Chip 1");
+      addNewChip(inputText, targetChipsWrapperElement);
+      event.target.value = "";
+    }
+  })
+})
+
+
+window.onload = () => addNewChip("Chip 1", document.querySelector(".chips-wrapper")); //demo
 
 //Drawer Functionality
 
