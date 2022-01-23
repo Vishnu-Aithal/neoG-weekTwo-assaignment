@@ -212,9 +212,15 @@
       <h2>Chips</h2>
       <hr />
 
-      <div class="chips">
+      <div class="chips" id="exampleChipsID">
         <p class="sub-heading">Chip Items</p>
-
+        <div class="chips-icon-container" data-chip-target="#exampleChipsID">
+          <p class="sub-heading">Select Icon:</p>
+          <div class="chip-icon"><i class="fas fa-envelope chip-icon"></i></div>
+          <div class="chip-icon"><i class="fas fa-folder-open chip-icon"></i></div>
+          <div class="chip-icon"><i class="fas fa-paper-plane chip-icon"></i></div>
+          <div class="chip-icon"><i class="fas fa-star chip-icon"></i></div>
+        </div>
         <div class="chips-wrapper" id="example-target">
           <input class="input-new-chip" type="text" data-input-target="#example-target" placeholder="New chip..." />
         </div>

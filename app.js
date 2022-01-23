@@ -3,6 +3,11 @@
 const addNewChip = function (text, chipsWrapper) {
   let newChip = document.createElement("div");
   newChip.classList.add("chip");
+  if (chipsWrapper.parentElement.activeIcon) {
+    let newChipIcon = chipsWrapper.parentElement.activeIcon.cloneNode(true);
+    newChipIcon.classList.add("chip-left-icon");
+    newChip.appendChild(newChipIcon)
+  }
   let newChipText = document.createElement("div");
   newChipText.classList.add("chip-text");
   newChipText.innerText = text;
@@ -26,6 +31,21 @@ document.querySelectorAll(".input-new-chip").forEach(newChipInput => {
       event.target.value = "";
     }
   })
+})
+
+
+document.querySelectorAll(".chip-icon").forEach(currentChipIcon => {
+  currentChipIcon.onclick = () => {
+    let targetChipsContainer = document.querySelector(currentChipIcon.parentElement.getAttribute("data-chip-target"));
+    if (targetChipsContainer.activeIcon) targetChipsContainer.activeIcon.classList.remove("active");
+    if (targetChipsContainer.activeIcon === currentChipIcon) {
+      currentChipIcon.classList.remove("active");
+      targetChipsContainer.activeIcon = null;
+    } else {
+      currentChipIcon.classList.add("active");
+      targetChipsContainer.activeIcon = currentChipIcon;
+    }
+  }
 })
 
 
