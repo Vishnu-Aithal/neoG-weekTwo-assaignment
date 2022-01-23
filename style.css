@@ -28,7 +28,7 @@ hr {
 .container-lg {
   min-height: 360px;
   background-color: #f3f4f6;
-  box-shadow: 1px 0 1px lightgray;
+  box-shadow: 0 1px 1px lightgray;
 }
 
 .no-container-title {
@@ -250,20 +250,42 @@ hr {
 
 /* ----------------Drawer------------------- */
 
+.drawer-main-container {
+  display: grid;
+  height: 300px;
+  grid-template-rows: 1fr;
+  grid-template-columns: auto 1fr
+}
+
 .drawer {
   width: 300px;
   max-width: 100%;
   background-color: white;
-  padding: 1rem;
-  box-shadow: 1px 1px 2px gray;
-  height: 250px;
-  overflow-y: auto;
-  position: relative;
+  grid-column: 1/2;
+  grid-row: 1/4;
+  overflow: hidden;
 }
 
+.drawer-head:focus {
+  outline: none;
+}
 
+.drawer-main-container .content {
+  max-height: 100%;
+  grid-column: 2/6;
+  grid-row: 2/4;
+  background-color: white;
+  overflow-y: auto;
+  padding: 1rem;
+}
 
-.drawer.hide-drawer .drawer-head,
+.drawer-main-container .header {
+  grid-column: 2/ 6;
+  grid-row: 1/2;
+  height: 4rem;
+}
+
+.drawer.hide-drawer .drawer-head-text-container,
 .drawer.hide-drawer .text,
 .drawer.hide-drawer .notif-count,
 .drawer.hide-drawer .sub-drawer-collapse {
@@ -275,8 +297,7 @@ hr {
 }
 
 .drawer.hide-drawer .main-drawer-collapse {
-  position: static;
-  margin: 0 0.3rem 2rem;
+  margin-left: 0.3rem;
 }
 
 .drawer.hide-drawer .left-icon {
@@ -284,12 +305,12 @@ hr {
 }
 
 
-.drawer::-webkit-scrollbar {
+.drawer-list-main::-webkit-scrollbar {
   width: 2px;
   /* display: none; */
 }
 
-.drawer::-webkit-scrollbar-thumb {
+.drawer-list-main::-webkit-scrollbar-thumb {
   background-color: gray;
 }
 
@@ -297,26 +318,38 @@ hr {
   display: none;
 }
 
+
 .drawer-head {
-  margin-bottom: 1rem;
-  padding-left: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #7c3aed;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  color: white;
+  height: 4rem;
+  position: sticky;
+  top: 0;
+}
+
+.drawer-head-sub-text {
+  font-size: small;
+  color: white;
 }
 
 .main-drawer-collapse {
-  position: absolute;
-  margin: 1rem;
-  top: 0;
-  right: 0;
   -webkit-appearance: none;
-  background-color: white;
+  background-color: inherit;
+  color: white;
   border: none;
   cursor: pointer;
 }
 
-
-.drawer-list {
+.drawer-list-main {
   display: flex;
   flex-direction: column;
+  padding: 0 1rem;
+  max-height: calc(100% - 4rem);
+  overflow-y: auto;
 }
 
 .sub-drawer-collapse {

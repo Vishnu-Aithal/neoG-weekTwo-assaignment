@@ -232,59 +232,126 @@
       <h2>Collapsable Drawer with nesting</h2>
       <hr />
 
-      <div class="drawer">
-        <div class="drawer-head">
-          <h3 class="drawer-head-text">Title</h3>
-          <p class="sub-heading">subtext</p>
+      <div class="drawer-main-container">
 
-        </div>
+        <header class="header">
+          <h1 class="header-brand">San Francisco, CA</h1>
+          <div class="header-button">
+            <button><i class="fas fa-download"></i></button>
+            <button><i class="fas fa-print"></i></button>
+            <button><i class="far fa-bookmark"></i></button>
+          </div>
+        </header>
 
-        <button class="main-drawer-collapse">
-          <i class="fas fa-bars fa-2x"></i>
-        </button>
-
-        <ul class="drawer-list drawer-list-main">
-          <li class="drawer-list-item">
-            <i class="fas fa-envelope left-icon"></i>
-            <p class="text">Inbox</p>
-            <div class="notif-count">25</div>
-          </li>
-
-          <li class="drawer-list-sub">
-            <div class="drawer-head-sub">
-              <i class="fas fa-folder-open left-icon"></i>
-              <p class="text">Nested list</p>
-              <button class="sub-drawer-collapse">
-                <i class="fas fa-angle-right fa-lg"></i>
-              </button>
+        <div class="drawer" id="exampleDrawer">
+          <div class="drawer-head">
+            <div class="drawer-head-text-container">
+              <h3 class="drawer-head-main-text">Title</h3>
+              <p class="drawer-head-sub-text">subtext</p>
             </div>
+            <button class="main-drawer-collapse" data-target-drawer="#exampleDrawer">
+              <i class="fas fa-bars fa-2x"></i>
+            </button>
+          </div>
 
-            <ul class="drawer-list collapsed">
-              <li class="drawer-list-item">
-                <i class="fas fa-envelope left-icon"></i>
-                <p class="text">Inbox</p>
-                <div class="notif-count">25</div>
-              </li>
-              <li class="drawer-list-item">
-                <i class="fas fa-paper-plane left-icon"></i>
-                <p class="text">Drafts</p>
-                <div class="notif-count">89</div>
-              </li>
-            </ul>
-          </li>
+          <ul class="drawer-list drawer-list-main">
 
-          <li class="drawer-list-item">
-            <i class="fas fa-star left-icon"></i>
-            <p class="text">Star</p>
-            <div class="notif-count">56</div>
-          </li>
-          <li class="drawer-list-item">
-            <i class="fas fa-paper-plane left-icon"></i>
-            <p class="text">Drafts</p>
-            <div class="notif-count">89</div>
-          </li>
-        </ul>
+            <li class="drawer-list-item" data-parent-drawer="#exampleDrawer">
+              <i class="fas fa-envelope left-icon"></i>
+              <p class="text">Inbox</p>
+              <div class="notif-count">25</div>
+            </li>
+            <li class="drawer-list-item" data-parent-drawer="#exampleDrawer">
+              <i class="fas fa-exclamation-circle left-icon"></i>
+              <p class="text">Spam</p>
+              <div class="notif-count">25</div>
+            </li>
+            <li class="drawer-list-item" data-parent-drawer="#exampleDrawer">
+              <i class="fas fa-clock left-icon"></i>
+              <p class="text">Snoozed</p>
+              <div class="notif-count">25</div>
+            </li>
+            <li class="drawer-list-item" data-parent-drawer="#exampleDrawer">
+              <i class="fas fa-trash left-icon"></i>
+              <p class="text">Trash</p>
+              <div class="notif-count">25</div>
+            </li>
+            <li class="drawer-list-sub">
+              <div class="drawer-head-sub" data-target-drawer-list="#exampleSubDrawer">
+                <i class="fas fa-folder-open left-icon"></i>
+                <p class="text">Nested list</p>
+                <button class="sub-drawer-collapse">
+                  <i class="fas fa-angle-right fa-lg"></i>
+                </button>
+              </div>
+              <ul class="drawer-list collapsed" id="exampleSubDrawer">
+                <li class="drawer-list-item" data-parent-drawer="#exampleDrawer">
+                  <i class="fas fa-envelope left-icon"></i>
+                  <p class="text">Inbox</p>
+                  <div class="notif-count">25</div>
+                </li>
+                <li class="drawer-list-item" data-parent-drawer="#exampleDrawer">
+                  <i class="fas fa-paper-plane left-icon"></i>
+                  <p class="text">Drafts</p>
+                  <div class="notif-count">89</div>
+                </li>
+              </ul>
+            </li>
+            <li class="drawer-list-item" data-parent-drawer="#exampleDrawer">
+              <i class="fas fa-star left-icon"></i>
+              <p class="text">Star</p>
+              <div class="notif-count">56</div>
+            </li>
+            <li class="drawer-list-item" data-parent-drawer="#exampleDrawer">
+              <i class="fas fa-paper-plane left-icon"></i>
+              <p class="text">Drafts</p>
+              <div class="notif-count">89</div>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Semper feugiat nibh sed pulvinar. Augue lacus viverra vitae congue eu consequat ac felis.
+            Curabitur gravida arcu ac tortor dignissim. Ac orci phasellus egestas tellus rutrum tellus. Rutrum quisque
+            non
+            tellus orci ac. Blandit libero volutpat sed cras ornare arcu. Vel pharetra vel turpis nunc eget. Volutpat
+            commodo sed egestas egestas. Purus sit amet luctus venenatis lectus magna fringilla. Scelerisque fermentum
+            dui
+            faucibus in ornare. Massa eget egestas purus viverra accumsan in nisl. Euismod lacinia at quis risus sed
+            vulputate odio ut enim. Cursus risus at ultrices mi tempus. Vel fringilla est ullamcorper eget nulla
+            facilisi
+            etiam dignissim diam. Sed risus ultricies tristique nulla aliquet. Dolor sit amet consectetur adipiscing
+            elit
+            ut aliquam. Cursus sit amet dictum sit amet justo donec enim diam. Sagittis purus sit amet volutpat
+            consequat
+            mauris nunc.
+
+            Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Non sodales neque sodales ut etiam sit
+            amet. Nibh praesent tristique magna sit amet purus gravida quis blandit. Fermentum dui faucibus in ornare
+            quam
+            viverra orci. Tellus in hac habitasse platea dictumst vestibulum rhoncus est. Aliquam purus sit amet luctus
+            venenatis lectus magna fringilla urna. Amet justo donec enim diam vulputate. Urna nunc id cursus metus.
+            Lorem
+            ipsum dolor sit amet consectetur adipiscing. Non sodales neque sodales ut etiam sit amet nisl. A iaculis at
+            erat pellentesque adipiscing commodo elit. Eget aliquet nibh praesent tristique magna sit. Pharetra diam sit
+            amet nisl. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget egestas. Sed egestas egestas
+            fringilla phasellus faucibus scelerisque eleifend. Cursus vitae congue mauris rhoncus aenean vel elit
+            scelerisque. Neque ornare aenean euismod elementum nisi quis eleifend quam. Ut sem viverra aliquet eget sit
+            amet tellus. Aenean vel elit scelerisque mauris.
+
+            Egestas erat imperdiet sed euismod nisi porta lorem mollis. Enim nec dui nunc mattis enim ut tellus. Urna
+            nunc
+            id cursus metus aliquam eleifend mi in nulla. Quis lectus nulla at volutpat diam. Eu volutpat odio facilisis
+            mauris sit amet. Nunc pulvinar sapien et ligula ullamcorper. Tempus quam pellentesque nec nam aliquam sem.
+            Libero nunc consequat interdum varius sit amet mattis vulputate enim. Vulputate eu scelerisque felis
+            imperdiet. Phasellus faucibus scelerisque eleifend donec pretium. Quis blandit turpis cursus in hac.
+          </p>
+        </div>
       </div>
+
+
     </div>
 
     <!-- Header -->

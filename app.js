@@ -54,38 +54,27 @@ window.onload = () => addNewChip("Chip 1", document.querySelector(".chips-wrappe
 //Drawer Functionality
 
 const drawerListItems = document.querySelectorAll(".drawer-list-item");
-let activeItem;
 drawerListItems.forEach(
   (item) =>
   (item.onclick = () => {
-    if (activeItem) activeItem.classList.remove("selected");
+    let drawer = document.querySelector(item.getAttribute("data-parent-drawer"));
+    if (drawer.activeItem) drawer.activeItem.classList.remove("selected");
     item.classList.add("selected");
-    activeItem = item;
+    drawer.activeItem = item;
   })
 );
 
-// const mainDrawerCollapse = document.querySelector(".main-drawer-collapse");
-// mainDrawerCollapse.onclick = () => {
-//   let mainList = document.querySelector(".drawer-list-main");
-//   mainList.classList.toggle("collapsed");
-//   mainList.classList.contains("collapsed") ?
-//     (mainDrawerCollapse.innerHTML = `<i class="fas fa-angle-down fa-2x"></i>`) :
-//     (mainDrawerCollapse.innerHTML = `<i class="fas fa-angle-up fa-2x"></i>`);
-// };
-
-const mainDrawerCollapse = document.querySelector(".main-drawer-collapse");
-mainDrawerCollapse.onclick = () => {
-  let drawer = document.querySelector(".drawer");
-  drawer.classList.toggle("hide-drawer");
-  // mainList.classList.contains("collapsed") ?
-  //   (mainDrawerCollapse.innerHTML = `<i class="fas fa-angle-down fa-2x"></i>`) :
-  //   (mainDrawerCollapse.innerHTML = `<i class="fas fa-angle-up fa-2x"></i>`);
-};
+document.querySelectorAll(".main-drawer-collapse").forEach(mainDrawerCollapse => {
+  mainDrawerCollapse.onclick = () => {
+    let drawer = document.querySelector(mainDrawerCollapse.getAttribute("data-target-drawer"));
+    drawer.classList.toggle("hide-drawer");
+  }
+})
 
 document.querySelectorAll(".drawer-head-sub").forEach(
   (subList) =>
   (subList.onclick = (e) => {
-    let currentSubDrawerList = e.target.parentElement.children[1];
+    let currentSubDrawerList = document.querySelector(subList.getAttribute("data-target-drawer-list"))
     let currentArrowIcon = e.target.children[2];
     currentSubDrawerList.classList.toggle("collapsed");
     currentSubDrawerList.classList.contains("collapsed") ?
