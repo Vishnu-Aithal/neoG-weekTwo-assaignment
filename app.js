@@ -112,3 +112,14 @@ tabs.forEach(tab => {
     activeTab = currentTab;
   }
 })
+
+//Header Short Functionality 
+
+document.querySelector(".header-short-container").addEventListener("scroll", (e) => {
+  let header = e.target.children[0];
+  if (e.target.scrollTop > 100) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+})
