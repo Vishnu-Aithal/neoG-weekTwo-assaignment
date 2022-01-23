@@ -261,7 +261,8 @@ hr {
 }
 
 .drawer {
-  width: 250px;
+  min-width: 250px;
+  width: fit-content;
   max-width: 100%;
   background-color: white;
   grid-column: 1/2;
@@ -270,6 +271,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: min-width 0.2s;
 }
 
 .drawer-head:focus {
@@ -300,6 +302,7 @@ hr {
 
 .drawer.hide-drawer {
   width: fit-content;
+  min-width: 10px;
 }
 
 .drawer.hide-drawer .main-drawer-collapse {
