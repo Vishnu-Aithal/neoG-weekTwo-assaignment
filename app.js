@@ -107,14 +107,36 @@ document.querySelectorAll(".show-snackbar").forEach((button, id) => {
 
 //Tabs Functionality 
 
-let activeTab;
-const tabs = document.querySelectorAll(".tab");
-tabs.forEach(tab => {
+
+document.querySelectorAll(".tabs-f .tab").forEach(tab => {
   tab.onclick = (e) => {
-    let currentTab = e.target
-    if (activeTab) activeTab.classList.remove("active")
-    currentTab.classList.add("active");
-    activeTab = currentTab;
+    let tabContainer = e.target.parentElement;
+    let currentActiveTab = document.querySelector(tabContainer.getAttribute("data-active-tab"));
+    let currentActiveBody = document.querySelector(currentActiveTab.getAttribute("data-toggle"));
+    let targetTab = e.target;
+    let targetBody = document.querySelector(targetTab.getAttribute("data-toggle"));
+
+    currentActiveTab.classList.remove("active");
+    targetTab.classList.add("active");
+    tabContainer.setAttribute("data-active-tab", `#${targetTab.id}`)
+    currentActiveBody.style.display = "none";
+    targetBody.style.display = "block";
+  }
+})
+
+document.querySelectorAll(".tabs-s .tab").forEach(tab => {
+  tab.onclick = (e) => {
+    let tabContainer = e.target.parentElement;
+    let currentActiveTab = document.querySelector(tabContainer.getAttribute("data-active-tab"));
+    let currentActiveBody = document.querySelector(currentActiveTab.getAttribute("data-toggle"));
+    let targetTab = e.target;
+    let targetBody = document.querySelector(targetTab.getAttribute("data-toggle"));
+
+    currentActiveTab.classList.remove("active");
+    targetTab.classList.add("active");
+    tabContainer.setAttribute("data-active-tab", `#${targetTab.id}`)
+    currentActiveBody.style.display = "none";
+    targetBody.style.display = "block";
   }
 })
 

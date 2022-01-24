@@ -780,9 +780,51 @@ hr {
 
 /* ----------------Tabs------------------- */
 
+.tab-demo-container {
+  display: grid;
+  height: 300px;
+  width: fit-content;
+  grid-template-rows: min-content 1fr;
+  border-radius: 20px;
+  border: solid 2px lightgray;
+  overflow: hidden;
+}
+
 .tabs-f {
   display: flex;
-  margin-bottom: 1rem;
+  grid-row: 1/2;
+}
+
+.body {
+  display: none;
+  margin-top: 1rem;
+  background-position: center;
+  background-size: cover;
+  grid-row: 2/6;
+}
+
+#sbody-1,
+#fbody-1 {
+  display: block;
+  background-image: url(https://picsum.photos/id/100/2500/1656);
+}
+
+#sbody-2,
+#fbody-2 {
+  background-image: url(https://picsum.photos/id/1003/1181/1772);
+}
+
+#sbody-3,
+#fbody-3 {
+  background-image: url(https://picsum.photos/id/101/2621/1747);
+}
+
+#sbody-4 {
+  background-image: url(https://picsum.photos/id/1018/3914/2935);
+}
+
+#sbody-5 {
+  background-image: url(https://picsum.photos/id/1020/4288/2848);
 }
 
 .tabs-s {

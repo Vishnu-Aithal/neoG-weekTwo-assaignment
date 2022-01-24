@@ -355,11 +355,11 @@
     </div>
 
     <!-- Header -->
-
     <div class="container-lg">
       <h2 class="container-title">Header</h2>
       <hr>
       <!-- Header normal -->
+      <h3 class="container-title">Normal Header</h3>
       <div class="header-container">
         <header class="header">
           <button class="nav-toggle"><i class="fas fa-bars"></i></button>
@@ -412,6 +412,7 @@
       </div>
 
       <!-- Header Sticky -->
+      <h3 class="container-title">Fixed Top Header</h3>
       <div class="header-container">
         <header class="header header-sticky">
           <button class="nav-toggle"><i class="fas fa-bars"></i></button>
@@ -481,6 +482,7 @@
       </div>
 
       <!-- Header Short -->
+      <h3 class="container-title">Collapsing Header</h3>
       <div class="header-container header-short-container">
         <header class="header header-short">
           <button class="nav-toggle"><i class="fas fa-bars"></i></button>
@@ -549,8 +551,6 @@
         </div>
       </div>
     </div>
-
-
 
     <!-- Badge -->
     <div class="container-sm">
@@ -662,20 +662,33 @@
       <h2>Tabs</h2>
       <hr>
       <h3>Fixed Tab</h3>
-      <nav class="tabs-f">
-        <div class="tab">Tab 1</div>
-        <div class="tab">Tab 2</div>
-        <div class="tab">Tab 3</div>
-      </nav>
+      <div class="tab-demo-container">
+        <nav class="tabs-f" data-active-tab="#ftab-1">
+          <div class="tab active" id="ftab-1" data-toggle="#fbody-1">Tab 1</div>
+          <div class="tab" id="ftab-2" data-toggle="#fbody-2">Tab 2</div>
+          <div class="tab" id="ftab-3" data-toggle="#fbody-3">Tab 3</div>
+        </nav>
+        <div class="body" id="fbody-1"></div>
+        <div class="body" id="fbody-2"></div>
+        <div class="body" id="fbody-3"></div>
+      </div>
+
       <hr>
       <h3>Scrollable tab</h3>
-      <nav class="tabs-s">
-        <div class="tab">Tab 1</div>
-        <div class="tab">Tab 2</div>
-        <div class="tab">Tab 3</div>
-        <div class="tab">Tab 4</div>
-        <div class="tab">Tab 5</div>
-      </nav>
+      <div class="tab-demo-container">
+        <nav class="tabs-s" data-active-tab="#stab-1">
+          <div class="tab active" id="stab-1" data-toggle="#sbody-1">Tab 1</div>
+          <div class="tab" id="stab-2" data-toggle="#sbody-2">Tab 2</div>
+          <div class="tab" id="stab-3" data-toggle="#sbody-3">Tab 3</div>
+          <div class="tab" id="stab-4" data-toggle="#sbody-4">Tab 4</div>
+          <div class="tab" id="stab-5" data-toggle="#sbody-5">Tab 5</div>
+        </nav>
+        <div class="body" id="sbody-1"></div>
+        <div class="body" id="sbody-2"></div>
+        <div class="body" id="sbody-3"></div>
+        <div class="body" id="sbody-4"></div>
+        <div class="body" id="sbody-5"></div>
+      </div>
     </div>
 
   </main>
