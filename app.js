@@ -49,7 +49,7 @@ document.querySelectorAll(".chip-icon").forEach(currentChipIcon => {
 })
 
 
-window.onload = () => addNewChip("Chip 1", document.querySelector(".chips-wrapper")); //demo
+
 
 //Drawer Functionality
 
@@ -70,6 +70,8 @@ document.querySelectorAll(".main-drawer-collapse").forEach(mainDrawerCollapse =>
     drawer.classList.toggle("hide-drawer");
   }
 })
+
+
 
 document.querySelectorAll(".drawer-head-sub").forEach(
   (subList) =>
@@ -92,13 +94,16 @@ badgeToggleBtn.onclick = (e) => {
 
 //SnackBar Functionality
 
-const showSnackbar = document.querySelector(".show-snackbar");
-const snackbar = document.querySelector(".snackbar")
-const snackbarDismiss = document.querySelector(".snackbar-dismiss");
-const snackbarAction = document.querySelector(".snackbar-action")
-showSnackbar.onclick = () => snackbar.style.display = "flex";
-snackbarDismiss.onclick = () => snackbar.style.display = "none";
-snackbarAction.onclick = () => location.reload();
+document.querySelectorAll(".snackbar-dismiss").forEach(dismiss => {
+  dismiss.onclick = () => {
+    let targetSnackBar = document.querySelector(dismiss.getAttribute("data-target"));
+    targetSnackBar.style.display = "none"
+  }
+})
+
+document.querySelectorAll(".show-snackbar").forEach((button, id) => {
+  button.onclick = () => document.querySelectorAll(".snackbar")[id].style.display = "flex"
+})
 
 //Tabs Functionality 
 
@@ -123,3 +128,12 @@ document.querySelector(".header-short-container").addEventListener("scroll", (e)
     header.classList.remove("scrolled");
   }
 })
+
+
+
+window.onload = () => {
+  addNewChip("Chip 1", document.querySelector(".chips-wrapper"));
+  if (matchMedia("only screen and (max-width:600px)").matches) {
+    document.querySelectorAll(".drawer").forEach(drawer => drawer.classList.add("hide-drawer"))
+  }
+}

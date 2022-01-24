@@ -587,6 +587,7 @@ hr {
   cursor: pointer;
 }
 
+
 .show-snackbar:hover {
   background: #666;
 }
@@ -607,12 +608,31 @@ hr {
   box-shadow: 1px 1px 2px gray;
 }
 
+.snackbar.snackbar-leading {
+  left: 10px;
+  bottom: 10px;
+  min-width: fit-content;
+  transform: none;
+}
+
+.snackbar.snackbar-stacked {
+  min-width: fit-content;
+  width: fit-content;
+  flex-direction: column;
+}
+
+.snackbar.snackbar-stacked .snackbar-btn-container {
+  margin-left: auto;
+
+}
+
 .snackbar-message {
   margin-right: auto;
   color: white;
   font-size: 0.9rem;
   font-weight: 500;
 }
+
 
 .snackbar-btn {
   border: none;
@@ -623,13 +643,21 @@ hr {
   cursor: pointer;
 }
 
+.snackbar.snackbar-stacked .snackbar-btn {
+  margin-top: 1rem;
+  margin-right: 0;
+}
+
 .snackbar-action {
   color: #6200ee;
 }
 
+
 .snackbar-dismiss {
   color: white;
 }
+
+
 
 /* ----------------Dialog------------------- */
 

@@ -582,7 +582,9 @@
     <div class="container-sm">
       <h2>SnackBar</h2>
       <hr>
-      <button class="show-snackbar">Show-SnackBar</button>
+      <button class="show-snackbar" id="snackbar-btn-baseline">SnackBar-Baseline</button>
+      <button class="show-snackbar" id="snackbar-btn-leading">Show-SnackBar-Leading</button>
+      <button class="show-snackbar" id="snackbar-btn-stacked">Show-SnackBar-Stacked</button>
     </div>
 
     <!-- Dialogs -->
@@ -631,10 +633,24 @@
   </main>
 
   <!-- SnackBar -->
-  <div class="snackbar">
+  <div class="snackbar" id="snackbar">
     <p class="snackbar-message">Something went wrong! Try Again</p>
     <button class="snackbar-btn snackbar-action">RETRY</button>
-    <button class="snackbar-btn snackbar-dismiss">X</button>
+    <button class="snackbar-btn snackbar-dismiss" data-target="#snackbar">X</button>
+  </div>
+
+  <div class="snackbar snackbar-leading" id="snackbar-leading">
+    <p class="snackbar-message">Task Done!</p>
+    <button class="snackbar-btn snackbar-action">UNDO</button>
+    <button class="snackbar-btn snackbar-dismiss" data-target="#snackbar-leading">X</button>
+  </div>
+
+  <div class="snackbar snackbar-stacked" id="snackbar-stacked">
+    <p class="snackbar-message">This Name already exists! Try a different one!</p>
+    <div class="snackbar-btn-container">
+      <button class="snackbar-btn snackbar-action">CHANGE NAME</button>
+      <button class="snackbar-btn snackbar-dismiss" data-target="#snackbar-stacked">X</button>
+    </div>
   </div>
 
 </body>
