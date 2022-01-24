@@ -1,2 +1,2 @@
-# neoG-component-library
+# NeoG-Component-Library
  
