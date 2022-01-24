@@ -582,31 +582,79 @@
     <div class="container-sm">
       <h2>SnackBar</h2>
       <hr>
-      <button class="show-snackbar" id="snackbar-btn-baseline">SnackBar-Baseline</button>
-      <button class="show-snackbar" id="snackbar-btn-leading">Show-SnackBar-Leading</button>
-      <button class="show-snackbar" id="snackbar-btn-stacked">Show-SnackBar-Stacked</button>
+      <button class="show-component show-snackbar" id="snackbar-btn-baseline">SnackBar-Baseline</button>
+      <button class="show-component show-snackbar" id="snackbar-btn-leading">Show-SnackBar-Leading</button>
+      <button class="show-component show-snackbar" id="snackbar-btn-stacked">Show-SnackBar-Stacked</button>
     </div>
 
     <!-- Dialogs -->
     <div class="container-sm">
       <h2>Dialog</h2>
       <hr>
-      <div class="dialog">
-        <h1 class="dialog-header">Dialog Header</h1>
-        <p class="dialog-text">Dialog body text</p>
-        <div class="dialog-btn-container-s">
-          <button class="dialog-btn">ACTION 1</button>
-          <button class="dialog-btn">ACTION 2</button>
+
+      <button class="show-component show-dialog">Show Dialog Alert</button>
+      <button class="show-component show-dialog">Show Dialog Simple</button>
+      <button class="show-component show-dialog">Show Dialog Confirm</button>
+
+      <div class="dialog-block">
+        <div class="dialog dialog-alert">
+          <h1 class="dialog-header">Dialog Header</h1>
+          <p class="dialog-text">Dialog body text</p>
+          <div class="dialog-btn-container-alert">
+            <button class="dialog-btn">ACTION 1</button>
+            <button class="dialog-btn">ACTION 2</button>
+          </div>
         </div>
       </div>
-      <div class="dialog">
-        <h1 class="dialog-header">Dialog Header</h1>
-        <p class="dialog-text">Dialog body text</p>
-        <div class="dialog-btn-container-l">
-          <button class="dialog-btn">FULL-WIDTH ACTION 1</button>
-          <button class="dialog-btn">FULL-WIDTH ACTION 2</button>
+
+      <div class="dialog-block">
+        <div class="dialog dialog-simple">
+          <h1 class="dialog-header">Dialog Header</h1>
+          <div class="dialog-btn-container-simple">
+            <button class="dialog-btn"><i class="fas fa-user-circle fa-2x"></i>Item 1</button>
+            <button class="dialog-btn"><i class="fas fa-user-circle fa-2x"></i>Item 1</button>
+            <button class="dialog-btn"><i class="fas fa-user-circle fa-2x"></i>Item 1</button>
+          </div>
         </div>
       </div>
+
+      <div class="dialog-block">
+        <div class="dialog dialog-confirm">
+          <h1 class="dialog-header">Dialog Header</h1>
+          <div class="dialog-options">
+            <div class="dialog-radio">
+              <input type="radio" name="item-1" id="">
+              <label for="item-1">Item 1</label>
+            </div>
+            <div class="dialog-radio">
+              <input type="radio" name="item 2" id="">
+              <label for="item-2">Item 2</label>
+            </div>
+            <div class="dialog-radio">
+              <input type="radio" name="item 3" id="">
+              <label for="item-3">Item 3</label>
+            </div>
+            <div class="dialog-radio">
+              <input type="radio" name="item 4" id="">
+              <label for="item-4">Item 4</label>
+            </div>
+            <div class="dialog-radio">
+              <input type="radio" name="item 5" id="">
+              <label for="item-5">Item 5</label>
+            </div>
+            <div class="dialog-radio">
+              <input type="radio" name="item 5" id="">
+              <label for="item-5">Item 5</label>
+            </div>
+          </div>
+          <div class="dialog-btn-container-confirm">
+            <button class="dialog-btn">ACTION 1</button>
+            <button class="dialog-btn">ACTION 2</button>
+          </div>
+        </div>
+      </div>
+
+
     </div>
 
     <!-- Tabs -->

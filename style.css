@@ -43,6 +43,21 @@ hr {
   font-weight: 500;
 }
 
+.show-component {
+  padding: 0.3rem;
+  font-weight: 600;
+  background: linear-gradient(#333, #444);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+.show-component:hover {
+  background: #666;
+}
+
 /* ----------------------------CARD------------------ */
 
 .card-container {
@@ -64,6 +79,10 @@ hr {
   justify-content: space-between;
   background-color: white;
   margin: 1rem 0;
+}
+
+.card img:hover {
+  opacity: 0.8;
 }
 
 .card-hz .card-header {
@@ -335,6 +354,7 @@ hr {
   position: sticky;
   top: 0;
   flex: 0 0 4rem;
+  user-select: none;
 }
 
 .drawer-head-sub-text {
@@ -353,7 +373,7 @@ hr {
 .drawer-list-main {
   display: flex;
   flex-direction: column;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   flex: 1 0 0;
   overflow-y: auto;
 }
@@ -370,6 +390,7 @@ hr {
   padding: 0.5rem;
   border-radius: 3px;
   align-items: center;
+  user-select: none;
 }
 
 .drawer-list-sub {
@@ -386,6 +407,7 @@ hr {
   padding: 0.5rem;
   border-radius: 3px;
   align-items: center;
+  user-select: none;
 }
 
 .drawer-head-sub>* {
@@ -577,21 +599,6 @@ hr {
 
 /* ----------------SnackBar------------------- */
 
-.show-snackbar {
-  padding: 0.3rem;
-  font-weight: 600;
-  background: linear-gradient(#333, #444);
-  color: white;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-
-.show-snackbar:hover {
-  background: #666;
-}
-
 .snackbar {
   display: none;
   align-items: center;
@@ -663,14 +670,36 @@ hr {
 
 .dialog {
   display: flex;
-  margin: 1rem;
   padding: 1rem;
   flex-direction: column;
-  background: white;
+  min-width: 250px;
   width: max-content;
-  height: max-content;
+  min-height: 200px;
   border-radius: 5px;
   box-shadow: 1px 1px 2px lightgray;
+  background-color: white;
+  user-select: none;
+}
+
+.dialog-block {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(211, 211, 211, 0.753);
+
+}
+
+.dialog-simple {
+  padding: 2rem;
+}
+
+.dialog-confirm {
+  padding: 1rem 0;
 }
 
 .dialog-header {
@@ -678,24 +707,52 @@ hr {
   margin-bottom: 0.8rem;
 }
 
-.dialog-text {
+.dialog-confirm .dialog-header {
+  border-bottom: solid 0.5px lightgray;
+  padding: 0 1rem 1rem;
+  margin-bottom: 0;
+}
+
+.dialog-alert .dialog-text {
   font-weight: 500;
   color: slategray;
 }
 
-.dialog-btn-container-l {
-  display: flex;
-  flex-direction: column;
-  margin-left: 1rem;
-  margin-top: 1.5rem;
-  align-self: flex-end;
-  gap: 0.5rem;
+
+.dialog-btn-container-alert,
+.dialog-btn-container-confirm {
+  margin-left: auto;
+  margin-top: auto;
+  justify-self: flex-end;
 }
 
-.dialog-btn-container-s {
-  margin-left: 1rem;
-  margin-top: 3rem;
-  align-self: flex-end;
+.dialog-btn-container-simple {
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog-confirm .dialog-options {
+  padding: 0 1rem;
+  font-weight: 600;
+  height: 150px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+
+}
+
+.dialog-confirm .dialog-radio {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.dialog-confirm .dialog-radio:hover {
+  background-color: rgb(233, 233, 233);
+}
+
+.dialog-confirm input[type="radio"] {
+  transform: scale(1.5)
 }
 
 .dialog-btn {
@@ -703,12 +760,18 @@ hr {
   padding: 0.5rem;
   border-radius: 2px;
   background: inherit;
-  margin: 0 0 0 1rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   border: none;
   color: #6200ee;
   cursor: pointer;
+}
+
+.dialog-btn-container-simple .dialog-btn {
+  display: flex;
+  color: gray;
+  align-items: center;
+  gap: 1rem;
 }
 
 .dialog-btn:hover {

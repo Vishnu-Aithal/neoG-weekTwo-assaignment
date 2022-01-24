@@ -130,6 +130,23 @@ document.querySelector(".header-short-container").addEventListener("scroll", (e)
 })
 
 
+// Dialog Functionality
+
+document.querySelectorAll(".show-dialog").forEach((button, id) => {
+  button.onclick = () => {
+    document.querySelectorAll(".dialog-block")[id].style.display = "flex";
+    document.querySelector("body").style.overflow = "hidden"
+  }
+})
+
+
+document.querySelectorAll(".dialog-block").forEach(block => {
+  block.onclick = (e) => {
+    if (e.target === block) block.style.display = "none";
+    document.querySelector("body").style.overflow = ""
+  }
+})
+
 
 window.onload = () => {
   addNewChip("Chip 1", document.querySelector(".chips-wrapper"));
