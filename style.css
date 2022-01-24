@@ -793,6 +793,7 @@ hr {
 .tabs-f {
   display: flex;
   grid-row: 1/2;
+  user-select: none;
 }
 
 .body {
@@ -830,7 +831,8 @@ hr {
 .tabs-s {
   display: flex;
   width: 200px;
-  overflow: hidden;
+  overflow: auto;
+  user-select: none;
 }
 
 .tabs-s:hover {
@@ -839,12 +841,15 @@ hr {
 
 .tabs-s::-webkit-scrollbar {
   height: 5px;
-  /* display: none; */
 }
 
 .tabs-s::-webkit-scrollbar-thumb {
-  background-color: gray;
+  background-color: none;
   border-radius: 2px;
+}
+
+.tabs-s:hover::-webkit-scrollbar-thumb {
+  background-color: lightgray;
 }
 
 .tab {
